@@ -11,6 +11,7 @@ const mongoSanitize = require("mongo-sanitize");
 const path = require("path");
 const hpp = require("hpp");
 const bodyParser = require("body-parser");
+const { router } = require("./src/route/Api");
 
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000,
@@ -30,6 +31,15 @@ app.use(hpp());
 app.use(express.json({limit : "50mb"}));
 app.use(express.urlencoded({extended : true , limit : "50mb"}));
 app.use(bodyParser.json());
+
+
+// Route
+app.use("/api/v1" , router);
+
+
+
+
+
 async function main() {
     await mongoose.connect(process.env.mongoose_url);
 

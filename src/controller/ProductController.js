@@ -1,37 +1,52 @@
+const { model } = require("mongoose");
 
 // Get Brand Controller
-exports.BrandList = async(req , res) =>{
-
+exports.ProductBrandList = async(req , res) =>{
+    return res.status(200).send({
+        message : "Get All Brand List"
+    })
 };
 // Get Category Controller
-exports.CategoryList = async (req , res) => {
+exports.ProductCategoryList = async (req , res) => {
     
 };
 
 // Get Slider Controller
-exports.SliderList = async (req , res) => {
+exports.ProductSliderList = async (req , res) => {
     
 }
 
-// List By Brand
-exports.ListByBrand = async (req , res) => {
+// Get All Product Specific Brand
+exports.ProductListByBrand = async (req , res) => {
     
 };
 
 
-// List By Category
-exports.ListByCategory = async (req , res) => {
+// Get All Product Specific Category
+exports.ProductListByCategory = async (req , res) => {
     
 }
 
 // Product by similer
-exports.ProductBySimiler = async (req , res) => {
+exports.ProductListBySmilier = async (req , res) => {
     
 }
 
 
 // Product search 
-exports.ListByKeyword = async (req , res) => {
+exports.ProductListByKeyword = async (req , res) => {
+    
+}
+
+
+// Product List by remark Examole Trending top Special Etc ...
+exports.ProductListByRemark = async (req , res) => {
+    
+};
+
+
+// Product List By filter
+exports.ProductListByFilter = async (req , res) => {
     
 }
 
@@ -43,5 +58,15 @@ exports.ProductRewiewList = async (req , res ) => {
 
 
 
+// Product Details
+exports.ProductDetails = async (req , res) => {
+    
+}
 
+
+
+// Product Review Create 
+exports.CreateProductReview = async (req , res) => {
+    
+};
 
