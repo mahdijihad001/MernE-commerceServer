@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema({
     category_id : {type :mongoose.Schema.Types.ObjectId , required : true , ref : "category"},
     brand_id : {type :mongoose.Schema.Types.ObjectId , required : true , ref : "brand"},
 } , {
-    Timestamp : true,
+    Timestamps : true,
     versionKey : false
 });
 

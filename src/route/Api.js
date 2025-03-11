@@ -1,5 +1,6 @@
 const express = require("express");
-const ProductController = require("../controller/ProductController")
+const ProductController = require("../controller/ProductController");
+const productModel = require("../model/ProductModel");
 const router = express.Router();
 
 
@@ -24,7 +25,12 @@ router.get("/ProductDetails/:productID" , ProductController.ProductDetails);
 // Product Review List by Product ID
 router.get("/ProductRewiewList/:productId" , ProductController.ProductRewiewList);
 
+// get all product
+// router.get("/allProduct" , async(req , res) =>{
+//     const data = await productModel.find({});
+//     res.status(200).send(data);
 
+// })
 
 
 module.exports = {router};
